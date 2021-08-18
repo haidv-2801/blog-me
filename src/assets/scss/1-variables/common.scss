@@ -1,0 +1,28 @@
+$textColor: #fff;
+$textColorBlack: #2e2e2e;
+$textHoverColor: #b80f0a;
+$textHoverColor2: #ecb100;
+$textWeight: 600;
+$breakpoint: 879px;
+$mainLRPadding: 0 2.4rem;
+$mainTBPadding: 7rem 0;
+
+//Social network
+$facebook: #4267B2;
+$instagram: #F77737;
+$github: #333;
+
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+) !default;
+
+//BlogList
+$inputRadius: 2rem;
+$textColorSecond: #8e8e95;

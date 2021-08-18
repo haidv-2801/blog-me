@@ -1,0 +1,35 @@
+//1-variables
+@import './1-variables/common.scss';
+
+//2-mixins
+@import './2-mixins/response';
+@import './2-mixins/button';
+
+//3-components
+@import './3-components/backdrop';
+@import './3-components/background';
+@import './3-components/layout';
+@import './3-components/header';
+@import './3-components/footer';
+@import './3-components/navbar';
+@import './3-components/loading';
+@import './3-components/scrolltop';
+@import './3-components/input';
+@import './3-components/texteditor';
+
+//page-home
+@import './3-components/home';
+
+//page-blog
+@import './3-components/searchbar';
+@import './3-components/bloglist';
+@import './3-components/blogitems';
+@import './3-components/blogs/blogdetail';
+@import './3-components/blogs/addnewblog';
+
+//page-contact
+@import './3-components/form';
+@import './3-components/contacts/mailbox';
+
+//page-auth
+@import './3-components/auths/authpage'

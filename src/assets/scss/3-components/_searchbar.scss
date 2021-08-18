@@ -1,0 +1,31 @@
+.search-bar {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .search-input {
+    width: 30vw;
+    height: 4rem;
+    border-radius: $inputRadius;
+    outline: none;
+    transition: 0.3s;
+    padding: 0rem 1.3rem;
+    background-color: whitesmoke;
+    font-size: 1.5rem;
+    @include respond($breakpoint) {
+      width: 60%;
+    }
+    &:focus-visible {
+      border: 3px solid $textHoverColor2;
+    }
+  }
+
+  .icon {
+    transition: 0.3s;
+    &:hover {
+      stroke: $textHoverColor2;
+      transform: scaleX(1.2) scaleY(1.2);
+    }
+  }
+}

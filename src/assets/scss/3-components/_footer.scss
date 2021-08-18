@@ -1,0 +1,39 @@
+.footer {
+  padding: 0rem 2.4rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+  .icon {
+    transition: .3s;
+    &:hover {
+      // stroke: $textHoverColor2;
+      fill: #fff;
+      transform: scaleX(1.2) scaleY(1.2);
+    }
+    &.facebook:hover {
+      stroke: $facebook;
+    }
+    &.instagram:hover {
+      stroke: $instagram;
+    }
+    &.github:hover {
+      stroke: $github;
+    }
+  }
+
+  a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem 1rem;
+    padding: 1rem 0;
+    border-radius: 50%;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+  }
+}

@@ -1,0 +1,9 @@
+.password {
+  position: relative;
+  .eye {
+    position: absolute;
+    top: 60%;
+    right: 1rem;
+    cursor: pointer;
+  }
+}

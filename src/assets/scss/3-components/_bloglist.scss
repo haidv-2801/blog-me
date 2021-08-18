@@ -1,0 +1,33 @@
+.bloglist {
+  --column: 4;
+  --spacing: 3rem;
+  padding: calc(var(--spacing) * 2) 15rem;
+  display: flex;
+  flex: 1;
+  margin-left: calc(-1 * var(--spacing));
+  flex-wrap: wrap;
+
+  @include respond(1440px) {
+    padding: calc(var(--spacing) * 2) 4rem;
+  }
+
+  @include respond(1200px) {
+    --column: 3;
+    --spacing: 3rem;
+    padding: calc(var(--spacing) * 2) 4rem;
+  }
+
+
+  @include respond(992px) {
+    --column: 2;
+    --spacing: 3rem;
+    padding: calc(var(--spacing) * 2) 4rem;
+  }
+
+  @include respond(768px) {
+    --column: 1;
+    --spacing: 2rem;
+    padding: calc(var(--spacing) * 2) 2rem;
+  }
+
+}

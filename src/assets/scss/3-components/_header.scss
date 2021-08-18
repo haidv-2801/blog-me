@@ -1,0 +1,35 @@
+.header {
+  z-index: 20;
+  padding: 0rem 2.4rem;
+  height: 60px;
+  width: 100vw;
+  line-height: 60px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__name {
+    font-size: 2rem;
+    transition: 300ms;
+    cursor: pointer;
+    &:hover {
+      border-color: $textHoverColor2;
+      color: $textHoverColor2;
+    }
+  }
+
+  &__menu {
+    display: none;
+    transition: .3s;
+    &:hover {
+      transform: scaleX(1.2) scaleY(1.2);
+      stroke: $textHoverColor2;
+    }
+
+    @include respond($breakpoint) {
+      display: block;
+    }
+  }
+}

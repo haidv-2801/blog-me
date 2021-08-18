@@ -1,0 +1,64 @@
+.form {
+  --column: 3;
+  --padding: 0 0;
+  width: calc(100% / var(--column));
+  height: fit-content;
+  margin: auto;
+  padding: var(--padding);
+
+  &.form-add {
+    --column: 1.5;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  button {
+    padding: 1rem 3rem;
+    border-radius: $inputRadius;
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+      background-color: $textHoverColor2;
+      color: $textColor
+    }
+  }
+
+  .row {
+    margin-bottom: 1rem;
+  }
+
+  &-bottom {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .more-contact {
+    font-size: 1.4rem;
+    text-align: right;
+    line-height: 5rem;
+    color: $textHoverColor2;
+  }
+
+  @include respond(1440px) {
+  }
+
+  @include respond(1200px) {
+    --column: 2;
+  }
+
+  @include respond(992px) {
+    &.form-add {
+      --column: 1;
+    }
+    --padding: 0rem 2rem;
+  }
+
+  @include respond(768px) {
+    --column: 1;
+    --padding: 0rem 2rem;
+  }
+}

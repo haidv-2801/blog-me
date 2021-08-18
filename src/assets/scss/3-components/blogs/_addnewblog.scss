@@ -1,0 +1,31 @@
+.addnew {
+  height: 100%;
+  padding: 0rem 2rem;
+  &__editor {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    .cke_inner {
+      height: 100%;
+    }
+
+    .preview {
+      height: 300px;
+      max-height: 1000px;
+      overflow: auto;
+      background-color: #fff;
+      color: black;
+      margin-left: 1rem;
+      padding: 2rem 2rem;
+      flex: 1;
+
+      white-space: pre-line;
+
+      img {
+        display: flex;
+        margin: 0 auto;
+      }
+    }
+  }
+}
