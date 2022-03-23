@@ -16,6 +16,11 @@
 @import './3-components/scrolltop';
 @import './3-components/input';
 @import './3-components/texteditor';
+@import './3-components/spinner';
+  //comment
+  @import './3-components/comments/comments';
+  @import './3-components/comments/commentlist';
+  @import './3-components/comments/commentitem';
 
 //page-home
 @import './3-components/home';

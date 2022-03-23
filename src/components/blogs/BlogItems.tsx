@@ -1,21 +1,16 @@
 import React from 'react';
-import Blog from '../../../models/Blog';
+import Blog from '../../models/Blog';
 import { Clock, User } from 'react-feather';
 import { useHistory } from 'react-router-dom';
+import { formatDate } from '../../helpers/ultis';
 
 const BlogItems: React.FC<{ item: Blog }> = (props) => {
   const history = useHistory();
-  const { title, image, author, contentSummary, createdDate } = props.item;
-
-  const formatDate = (date: Date) => {
-    const dateFormat = require('dateformat');
-    const now = date;
-    return dateFormat(now, 'mmmm dS, yyyy');
-  };
+  const { id, title, image, author, contentSummary, createdDate } = props.item;
 
   const viewHandler = () => {
-    
-  }
+    history.push(`blogs/${id}`);
+  };
 
   return (
     <div className="card">
@@ -26,9 +21,9 @@ const BlogItems: React.FC<{ item: Blog }> = (props) => {
         </p>
         <div className="card-meta row">
           <User stroke="#8e8e95" size="12px" />
-          {author},&nbsp;&nbsp;
+          {author}&nbsp;-&nbsp;
           <Clock stroke="#8e8e95" size="12px" />
-          {formatDate(createdDate)}
+        {formatDate(createdDate)}
         </div>
         <p className="card-text row">{contentSummary}</p>
         <div className="card-btn row">

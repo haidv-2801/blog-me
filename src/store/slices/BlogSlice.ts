@@ -19,6 +19,14 @@ export const getListBlogs = createAsyncThunk('GET_LIST_BLOG', async () => {
   return blogs;
 });
 
+export const getBlogById = createAsyncThunk(
+  'GET_BLOG_BY_ID',
+  async (id: string) => {
+    const blog = await BlogApi.getById(id);
+    return blog;
+  }
+);
+
 export const addBlog = createAsyncThunk('ADD_BLOG', async (body: Blog) => {
   const blogs = await BlogApi.add(body);
   return blogs;
@@ -31,16 +39,25 @@ const blogSlice = createSlice({
   extraReducers: {
     //getListBlog
     [getListBlogs.fulfilled as any]: (state, action) => {
-      state.blogs = [];
-      for (const key in action.payload) {
-        state.blogs.push(action.payload[key]);
-      }
+      state.blogs = action.payload;
       state.isLoading = false;
     },
     [getListBlogs.pending as any]: (state) => {
       state.isLoading = true;
     },
     [getListBlogs.rejected as any]: (state, action) => {
+      state.isLoading = false;
+      state.error = action.error;
+    },
+
+    //getbyid
+    [getBlogById.fulfilled as any]: (state) => {
+      state.isLoading = false;
+    },
+    [getBlogById.pending as any]: (state) => {
+      state.isLoading = true;
+    },
+    [getBlogById.rejected as any]: (state, action) => {
       state.isLoading = false;
       state.error = action.error;
     },

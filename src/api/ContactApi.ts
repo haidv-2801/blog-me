@@ -11,24 +11,41 @@ class ContactApi extends ConfigApi {
 
   async getAll() {
     const response = await fetch(`${this.baseUrl}${this.contorller}`);
+    const data = await response.json();
 
     if (!response.ok) {
-      throw new Error('Fetch failded!');
+      throw new Error(data.message || 'Fetch failded!');
     }
 
-    const data = response.json();
-    return data;
+    const transformContacts = [];
+
+    for(const key in data) {
+      const contactObj = {
+        ...data[key],
+        id: key
+      };
+      transformContacts.push(contactObj);
+    }
+
+    return transformContacts;
   }
 
   async add(body: Contact) {
     const response = await fetch(`${this.baseUrl}${this.contorller}`, {
       method: 'POST',
       body: JSON.stringify(body),
+      headers: {
+        'Content-Type': 'application/json',
+      },
     });
 
+    const data = await response.json();
+
     if (!response.ok) {
-      throw new Error('Add failded!');
+      throw new Error(data.message || 'Add failded!');
     }
+
+    return null;
   }
 }
 

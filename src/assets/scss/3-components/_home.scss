@@ -31,14 +31,15 @@
       flex-direction: column;
       justify-content: center;
       position: relative;
+      // color: $black;
+      font-size: 2rem;
       &__animation {
         position: relative;
         font-size: 5rem;
-        color: #141414;
-        -webkit-text-stroke: 0.1vw #393939;
+        color: #fff;
+        -webkit-text-stroke: 0.1vw $black;
         padding-top: 2px;
         width: fit-content;
-        // margin-bottom: 5rem;
         &::before {
           content: 'Welcome...';
           position: absolute;
@@ -46,9 +47,9 @@
           left: 0;
           width: 0%;
           height: 100%;
-          color: white;
-          -webkit-text-stroke: 0vw #393939;
-          border-right: 2px solid white;
+          color: $textHoverColor2;
+          -webkit-text-stroke: 0vw $textColor;
+          border-right: 2px solid $textHoverColor2;
           overflow: hidden;
           animation: text-animation 4s infinite ease-in-out;
         }

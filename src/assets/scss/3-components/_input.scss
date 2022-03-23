@@ -16,13 +16,13 @@
       outline: none;
       transition: 0.3s;
       padding: 0rem 1.3rem;
-      background-color: whitesmoke;
       font-size: 1.5rem;
+      border: 0.5px solid #ccc;
       &:focus-visible {
-        border: 2px solid $textHoverColor2;
+        border-color: $textHoverColor2;
       }
       &.invalid {
-        border:2px solid red;
+        border: 1px solid red;
       }
     }
 
@@ -33,11 +33,11 @@
       outline: none;
       transition: 0.3s;
       padding: 1rem 1.3rem;
-      background-color: whitesmoke;
       font-size: 1.5rem;
       height: 20rem;
+      border: .5px solid #ccc;
       &:focus-visible {
-        border: 2px solid $textHoverColor2;
+        border: 1px solid $textHoverColor2;
       }
       &.invalid {
         border-color: red;

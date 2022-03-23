@@ -2,8 +2,8 @@ import React from 'react';
 import * as yup from 'yup';
 import { useForm, FormProvider } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import BaseInput from '../../UI/form/BaseInput';
-import BaseTextArea from '../../UI/form/BaseTextArea';
+import BaseInput from '../UI/form/BaseInput';
+import BaseTextArea from '../UI/form/BaseTextArea';
 
 type FormData = {
   name: string;
@@ -16,10 +16,10 @@ const schema = yup.object().shape({
   email: yup
     .string()
     .trim()
-    .required('Vui lòng điền email')
+    .required('Email is required')
     .matches(
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-      'Email không hợp lệ'
+      'Email is not valid'
     ),
 });
 

@@ -6,7 +6,8 @@ import store from './store/Store';
 import App from './App';
 import AuthContextProvider from './contexts/auth-context';
 import './index.css';
-import './assets/scss/_style.css';
+// import './assets/scss/_style.css';
+import './assets/scss/_style2.css';
 
 ReactDOM.render(
   <React.StrictMode>

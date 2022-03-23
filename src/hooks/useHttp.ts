@@ -11,7 +11,7 @@ function httpReducer(state: any, action: any) {
 
   if (action.type === 'SUCCESS') {
     return {
-      data: action.reponseData,
+      data: action.responseData,
       error: null,
       status: 'COMPLETED',
     };
@@ -20,7 +20,7 @@ function httpReducer(state: any, action: any) {
   if (action.type === 'ERROR') {
     return {
       data: null,
-      error: null,
+      error: action.errorMessage,
       status: 'COMPLETED',
     };
   }
@@ -28,9 +28,9 @@ function httpReducer(state: any, action: any) {
   return state;
 }
 
-function useHttp(requestFunction: (requestData: any) => void, startWithPending:boolean = false) {
+function useHttp(requestFunction: (requestData: any) => any, startWithPending:boolean = false) {
   const [httpState, dispatch] = useReducer(httpReducer, {
-    status: startWithPending ? 'pending' : null,
+    status: startWithPending ? 'PENDING' : null,
     data: null,
     error: null,
   });
@@ -53,3 +53,5 @@ function useHttp(requestFunction: (requestData: any) => void, startWithPending:b
     ...httpState,
   };
 }
+
+export default useHttp;

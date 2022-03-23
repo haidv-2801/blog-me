@@ -11,13 +11,13 @@
     outline: none;
     transition: 0.3s;
     padding: 0rem 1.3rem;
-    background-color: whitesmoke;
+    border: .5px solid #ccc;
     font-size: 1.5rem;
     @include respond($breakpoint) {
       width: 60%;
     }
     &:focus-visible {
-      border: 3px solid $textHoverColor2;
+      border-color: $textHoverColor2;
     }
   }
 

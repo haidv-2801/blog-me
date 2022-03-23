@@ -16,30 +16,30 @@
       transition: 0.3s;
     }
 
-    &:hover::after,
-    &:hover::before {
-      top: 50%;
-      width: 10px;
-      color: $textHoverColor2;
-    }
+    // &:hover::after,
+    // &:hover::before {
+    //   top: 50%;
+    //   width: 10px;
+    //   color: $textHoverColor2;
+    // }
 
-    &::after,
-    &::before {
-      position: absolute;
-      content: '';
-      width: 0;
-      height: 1.5px;
-      background-color: $textHoverColor2;
-      transition: 0.3s;
-    }
+    // &::after,
+    // &::before {
+    //   position: absolute;
+    //   content: '';
+    //   width: 0;
+    //   height: 1.5px;
+    //   background-color: $textHoverColor2;
+    //   transition: 0.3s;
+    // }
 
-    &::after {
-      right: 100%;
-    }
+    // &::after {
+    //   right: 100%;
+    // }
 
-    &::before {
-      left: 100%;
-    }
+    // &::before {
+    //   left: 100%;
+    // }
   }
 
   @include respond($breakpoint) {
@@ -54,6 +54,7 @@
     width: fit-content;
     height: fit-content;
     display: none;
+    color: #fff;
 
     li {
       width: fit-content;

@@ -1,0 +1,39 @@
+.scroll-to-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 10rem;
+  z-index: 20;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  border-radius: 50%;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  cursor: pointer;
+  animation: scroll-to-top 0.3s ease-in-out forwards;
+  
+  &:hover .icon {
+    transition: .3s;
+    transform: scaleX(1.2) scaleY(1.2);
+    stroke: $textHoverColor2;
+  }
+}
+
+@keyframes scroll-to-top {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

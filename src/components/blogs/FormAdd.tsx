@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import * as yup from 'yup';
 import { useForm, FormProvider } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import BaseInput from '../../UI/form/BaseInput';
-import BaseTextArea from '../../UI/form/BaseTextArea';
-import CustomCKEditor from '../../common/CKEditor';
+import BaseInput from '../UI/form/BaseInput';
+import BaseTextArea from '../UI/form/BaseTextArea';
+import CustomCKEditor from '../common/CKEditor';
 
 type FormData = {
   title: string;

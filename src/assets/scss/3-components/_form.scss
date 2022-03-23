@@ -11,19 +11,9 @@
   }
 
   h2 {
+    font-size: 5rem;
     text-align: center;
     margin-bottom: 3rem;
-  }
-
-  button {
-    padding: 1rem 3rem;
-    border-radius: $inputRadius;
-    cursor: pointer;
-    transition: .3s;
-    &:hover {
-      background-color: $textHoverColor2;
-      color: $textColor
-    }
   }
 
   .row {

@@ -1,0 +1,28 @@
+.comment-item {
+  padding: 2rem;
+  font-size: 1.4rem;
+  box-shadow: 0 12px 15px rgb(140 152 164 / 10%);
+  display: flex;
+
+  .comment-user {
+    flex-shrink: 0;
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid $black;
+  }
+
+  .owner-name {
+    &.isAuthenicated {
+      color: $white;
+      border-radius: 1rem;
+      background-color: #888888;
+      padding: 0rem 5px;
+    }
+    font-weight: bold;
+  }
+}

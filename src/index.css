@@ -34,7 +34,7 @@ a {
 }
 
 /* style thanh scroll */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 5px;
   height: 7px;
 }
@@ -42,11 +42,42 @@ a {
 ::-webkit-scrollbar-thumb {
   background-color: #bbbbbb;
   border-radius: 10px;
-}
+} */
 
 
 .Loading {
   font-size: 5rem;
   width: 100%;
   text-align: center;
+}
+
+.centered {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.red {
+  color: red;
+}
+
+#backdrop {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  background-image: url('./assets/img/cropped1.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: right;
+}
+
+.float-right {
+  float: right;
+}
+
+.disable {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.3;
 }

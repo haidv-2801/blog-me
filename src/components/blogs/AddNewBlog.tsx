@@ -1,7 +1,7 @@
-import Blog from '../../../models/Blog';
-import { addBlog } from '../../../store/slices/BlogSlice';
+import Blog from '../../models/Blog';
+import { addBlog } from '../../store/slices/BlogSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '../../../store/Store';
+import { AppDispatch, RootState } from '../../store/Store';
 
 import FormAdd from './FormAdd';
 
